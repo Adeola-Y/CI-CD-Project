@@ -1,0 +1,32 @@
+name: Continuous Integration (CI) # example workflow
+
+on:
+  push:
+    branches:
+      - main  # runs when changes are pushed to the main branch
+  pull_request:
+    branches:
+      - main  # on pull requests to the main branch
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest  # the latest Ubuntu environment for the runner
+
+    steps:
+      #  checkout code from repository
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      #  Node.js environment
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'  # Node.js version to match project
+
+      # install project dependencies
+      - name: Install dependencies
+        run: npm install  # npm dependencies 
+
+      #  run linting script
+      - name: Run ESLint
+        run: npm run lint 
