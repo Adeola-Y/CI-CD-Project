@@ -1,32 +1,33 @@
-name: Continuous Integration (CI) # example workflow
+name: Continuous Integration (CI)
 
 on:
   push:
     branches:
-      - master  # runs when changes are pushed to the m branch
+      - master  #  when changes are pushed to the m branch
   pull_request:
     branches:
-      - master  # on pull requests to the m branch
+      - master #  on pull requests to the m branch
 
 jobs:
   lint:
-    runs-on: ubuntu-latest  # the latest Ubuntu environment for the runner
-
+    runs-on: ubuntu-latest  # latest Ubuntu for the runner
     steps:
-      #  checkout code from repository
+      #  checkout code from repo
       - name: Checkout code
         uses: actions/checkout@v2
 
-      #  Node.js environment
+      # node.js environment
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: '14'  # Node.js version to match project
+          node-version: '14'  #  node.js to match project
 
-      # install project dependencies
+      #install dependencies
       - name: Install dependencies
-        run: npm install  # npm dependencies 
+        working-directory: ./project_template/project  # change to wher package.json is
+        run: npm install  # Install npm dependencies
 
-      #  run linting script
+      # 4. Run ESLint
       - name: Run ESLint
-        run: npm run lint 
+        working-directory: ./project_template/project  # Same here
+        run: npm run lint  # Run the lint script
