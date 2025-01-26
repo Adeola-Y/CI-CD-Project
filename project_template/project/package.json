@@ -27,6 +27,17 @@
     "rollup": "^4.24.0",
     "rollup-plugin-copy": "^3.5.0",
     "serve": "^14.2.3",
+
+    "scripts": {
+  "lint": "eslint .",
+  "test": "vitest run",
+  "build": "npm run lint && vitest run",
+  "generate-docs": "jsdoc ./project_template/project/**/*.js --destination ./docs"
+   
+},
+ "_comment": " JSDoc will generate documentation for all JavaScript files which is why i added the extra part"
+  }
+
     "vitest": "^2.1.2"
   },
   "dependencies": {
