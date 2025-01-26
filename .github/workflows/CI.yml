@@ -25,9 +25,9 @@ jobs:
       #install dependencies
       - name: Install dependencies
         working-directory: ./project_template/project  # change to wher package.json is
-        run: npm install  # Install npm dependencies
+        run: npm install  # install npm dependencies
 
-      # 4. Run ESLint
+      #  run ESLint
       - name: Run ESLint
-        working-directory: ./project_template/project  # Same here
-        run: npm run lint  # Run the lint script
+        working-directory: ./project_template/project  
+        run: npm run lint  # 
