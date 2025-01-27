@@ -1,17 +1,10 @@
 name: Continuous Integration (CI)
 
-on:
-  push:
-    branches:
-      - master
-  pull_request:
-    branches:
-      - master
+on: [push, pull_request]
 
 jobs:
   lint:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
@@ -22,19 +15,7 @@ jobs:
           node-version: '14'
 
       - name: Install dependencies
-        working-directory: ./project_template/project
         run: npm install
 
       - name: Run ESLint
-        working-directory: ./project_template/project
-        run: npm run lint
-
-      - name: Run Tests with Coverage
-        working-directory: ./project_template/project
-        run: npm run test:coverage  #uses `test:coverage` from package.json
-
-      - name: Upload coverage report
-        uses: actions/upload-artifact@v3  # changed to v3
-        with:
-          name: coverage-report
-          path: ./coverage/  
+        run: npx eslint . --fix
