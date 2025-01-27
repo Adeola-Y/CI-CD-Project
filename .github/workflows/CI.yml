@@ -12,10 +12,12 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: '16'  # Update Node.js version to 16 or higher
+          node-version: '16'  #Node.js version 16 
 
       - name: Install dependencies
         run: npm install
+        working-directory: ./project_template/project  
 
       - name: Run ESLint
         run: npx eslint . --fix
+        working-directory: ./project_template/project  
