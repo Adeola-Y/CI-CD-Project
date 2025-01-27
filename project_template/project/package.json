@@ -7,7 +7,9 @@
     "build": "rollup -c",
     "watch": "rollup -c -w",
     "serve": "serve dist",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "test": "vitest run",  // runs tests without coverage
+    "test:coverage": "vitest run --coverage"  // runs tests with coverage
   },
   "keywords": [],
   "author": "",
@@ -27,7 +29,8 @@
     "rollup": "^4.24.0",
     "rollup-plugin-copy": "^3.5.0",
     "serve": "^14.2.3",
-    "vitest": "^2.1.2"
+    "vitest": "^2.1.2",
+    "c8": "^7.10.0"  // add c8 for bc wasn't working
   },
   "dependencies": {
     "chart.js": "^4.4.4",
