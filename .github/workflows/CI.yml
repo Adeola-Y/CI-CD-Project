@@ -3,31 +3,38 @@ name: Continuous Integration (CI)
 on:
   push:
     branches:
-      - master  #  when changes are pushed to the m branch
+      - master
   pull_request:
     branches:
-      - master #  on pull requests to the m branch
+      - master
 
 jobs:
   lint:
-    runs-on: ubuntu-latest  # latest Ubuntu for the runner
+    runs-on: ubuntu-latest
+
     steps:
-      #  checkout code from repo
       - name: Checkout code
         uses: actions/checkout@v2
 
-      # node.js environment
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: '14'  #  node.js to match project
+          node-version: '14'
 
-      #install dependencies
       - name: Install dependencies
-        working-directory: ./project_template/project  # change to wher package.json is
-        run: npm install  # install npm dependencies
+        working-directory: ./project_template/project
+        run: npm install
 
-      #  run ESLint
       - name: Run ESLint
-        working-directory: ./project_template/project  
-        run: npm run lint  # 
+        working-directory: ./project_template/project
+        run: npm run lint
+
+      - name: Run Tests with Coverage
+        working-directory: ./project_template/project
+        run: npm run test -- --coverage
+
+      - name: Upload coverage report
+        uses: actions/upload-artifact@v2
+        with:
+          name: coverage-report
+          path: ./coverage/  # 
