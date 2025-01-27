@@ -31,10 +31,10 @@ jobs:
 
       - name: Run Tests with Coverage
         working-directory: ./project_template/project
-        run: npm run test -- --coverage
+        run: npm run test:coverage  #  uses the `test:coverage` script from package.json
 
       - name: Upload coverage report
         uses: actions/upload-artifact@v2
         with:
           name: coverage-report
-          path: ./coverage/  # 
+          path: ./coverage/  # Path to the directory containing your coverage report
