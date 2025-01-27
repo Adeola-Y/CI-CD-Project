@@ -8,8 +8,8 @@
     "watch": "rollup -c -w",
     "serve": "serve dist",
     "lint": "eslint .",
-    "test": "vitest run",  // This runs your tests without coverage
-    "test:coverage": "vitest run --coverage"  // This runs your tests with coverage
+    "test": "vitest run",  
+    "test:coverage": "vitest run --coverage"  
   },
   "keywords": [],
   "author": "",
@@ -30,7 +30,7 @@
     "rollup-plugin-copy": "^3.5.0",
     "serve": "^14.2.3",
     "vitest": "^2.1.2",
-    "c8": "^7.10.0"  // Explicitly add c8 for coverage if needed
+    "c8": "^7.10.0"  
   },
   "dependencies": {
     "chart.js": "^4.4.4",
