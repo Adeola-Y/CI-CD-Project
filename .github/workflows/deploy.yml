@@ -1,4 +1,4 @@
-name: CD (Continious Development)
+name: CD (Continious Delievery)
 
 on:
   push:
