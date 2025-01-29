@@ -1,39 +1,23 @@
-name: CI/CD Workflow
+name: Continuous Integration (CI)
 
-on:
-  push:
-    branches:
-      - master
+on: [push, pull_request]
 
 jobs:
-  build-and-deploy:
+  lint:
     runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      pages: write
-      id-token: write 
-
     steps:
-    - name: Checkout Code
-      uses: actions/checkout@v3
+      - name: Checkout code
+        uses: actions/checkout@v2
 
-    - name: Set up Node.js
-      uses: actions/setup-node@v3
-      with:
-        node-version: '16'
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '16'  
 
-    - name: Install Dependencies
-      run: npm install
-      working-directory: ./project_template/project 
+      - name: Install dependencies
+        run: npm install
+        working-directory: ./project_template/project  
 
-    - name: Build Project
-      run: npm run build
-      working-directory: ./project_template/project 
-
-    - name: Upload artifact
-      uses: actions/upload-pages-artifact@v1
-      with:
-        path: ./project_template/project/dist
-
-    - name: Deploy to GitHub Pages
-      uses: actions/deploy-pages@v1
+      - name: Run ESLint
+        run: npx eslint . --fix
+        working-directory: ./project_template/project  
