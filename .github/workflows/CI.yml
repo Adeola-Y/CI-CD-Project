@@ -1,4 +1,4 @@
-name: CI Workflow with ESLint Config
+name: CI Workflow with ESLint and Tests
 
 on:
   push:
@@ -31,8 +31,15 @@ jobs:
       # Step 4: Check for ESLint config file existence (Debug)
       - name: Check if ESLint config exists
         run: ls -l ./project_template/project/eslint.config.js
+        working-directory: ./project_template/project
 
-      # Step 5: Run ESLint with the config file
+      # Step 5: Run ESLint with config file
       - name: Run ESLint with config file
         run: npx eslint . --config ./project_template/project/eslint.config.js
         working-directory: ./project_template/project
+
+      # Step 6: Run Tests (make sure this is a valid script in package.json)
+      - name: Run Tests
+        run: npm test
+        working-directory: ./project_template/project
+
