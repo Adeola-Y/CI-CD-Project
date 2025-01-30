@@ -21,24 +21,24 @@ jobs:
       - name: List top-level files
         run: ls -l
 
-      # Step 3: Install dependencies
-      - name: Install dependencies
-        run: npm install
-        working-directory: ./project_template/project
-
-      # Step 4: List all files in the project_template directory (Debug)
+      # Step 3: List files in project_template to confirm directory structure
       - name: List files in project_template directory
         run: ls -R ./project_template
 
-      # Step 5: Check for ESLint config file existence
-      - name: Check if ESLint config exists
-        run: ls -l ./project_template/project/eslint.config.js
+      # Step 4: List contents of project_template/project to see if eslint.config.js is there
+      - name: List files in project_template/project directory
+        run: ls -l ./project_template/project
+
+      # Step 5: Install dependencies
+      - name: Install dependencies
+        run: npm install
         working-directory: ./project_template/project
 
       # Step 6: Run ESLint with config file
       - name: Run ESLint with config file
         run: npx eslint . --config ./project_template/project/eslint.config.js
         working-directory: ./project_template/project
+
 
 
 
