@@ -51,11 +51,6 @@ jobs:
         run: npm run test:coverage  # run vitest with coverage
         working-directory: ./project_template/project
 
-        
-      - name: Show current working directory
-        run: pwd
-
-
       - name: Upload Coverage Report to GitHub Actions (Text)
         if: success()  # only upload if successfull
         run: |
