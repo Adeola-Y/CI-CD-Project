@@ -19,26 +19,26 @@ jobs:
 
       # Step 2: List top-level files in the repository (Debug)
       - name: List top-level files
-        run: ls -l $GITHUB_WORKSPACE  # This should show the files at the root level
+        run: ls -l
 
       # Step 3: Install dependencies
       - name: Install dependencies
         run: npm install
         working-directory: ./project_template/project
 
-      # Step 4: List all files in the project directory (Debug)
-      - name: List files in project directory
-        run: ls -R $GITHUB_WORKSPACE/project_template  # List files in project_template
+      # Step 4: List all files in the project_template directory (Debug)
+      - name: List files in project_template directory
+        run: ls -R ./project_template
 
       # Step 5: Check for ESLint config file existence
       - name: Check if ESLint config exists
-        run: ls -l $GITHUB_WORKSPACE/project_template/project/eslint.config.js  # Check if eslint.config.js exists
-        working-directory: $GITHUB_WORKSPACE
+        run: ls -l ./project_template/project/eslint.config.js
+        working-directory: ./project_template/project
 
       # Step 6: Run ESLint with config file
       - name: Run ESLint with config file
-        run: npx eslint . --config $GITHUB_WORKSPACE/project_template/project/eslint.config.js
-        working-directory: $GITHUB_WORKSPACE/project_template/project
+        run: npx eslint . --config ./project_template/project/eslint.config.js
+        working-directory: ./project_template/project
 
 
 
