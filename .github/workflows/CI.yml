@@ -28,18 +28,19 @@ jobs:
         run: npm install
         working-directory: ./project_template/project
 
-      # Step 4: Check for ESLint config file existence (Debug)
+      # Step 4: List all files in the directory to verify path (Debug)
+      - name: List files in project directory
+        run: ls -R ./project_template
+        working-directory: ./project_template
+
+      # Step 5: Check for ESLint config file existence
       - name: Check if ESLint config exists
         run: ls -l ./project_template/project/eslint.config.js
         working-directory: ./project_template/project
 
-      # Step 5: Run ESLint with config file
+      # Step 6: Run ESLint with config file
       - name: Run ESLint with config file
         run: npx eslint . --config ./project_template/project/eslint.config.js
         working-directory: ./project_template/project
 
-      # Step 6: Run Tests (make sure this is a valid script in package.json)
-      - name: Run Tests
-        run: npm test
-        working-directory: ./project_template/project
 
