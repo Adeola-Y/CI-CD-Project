@@ -40,7 +40,6 @@ jobs:
     needs: lint  # linting completes before running tests
 
     steps:
-     
       - name: Checkout code
         uses: actions/checkout@v2
 
@@ -50,17 +49,17 @@ jobs:
         with:
           node-version: '16'
 
-      # dependencies in the correct directory)
+      # dependencies in the correct directory
       - name: Install dependencies
         run: npm install
         working-directory: ./project_template/project
 
-      #  run Tests with coverage
+      # run Tests with coverage
       - name: Run Tests with Coverage
         run: npm run test:coverage
         working-directory: ./project_template/project
 
-      #  upload coverage to github actions
+      # upload coverage to github actions
       - name: Upload Coverage Report to GitHub Actions (Text)
         if: success()  # only upload if success
         run: |
@@ -70,7 +69,7 @@ jobs:
       # upload report as artifact
       - name: Upload HTML Coverage Report as Artifact
         if: success()
-        uses: actions/upload-artifact@v3  # use v3
+        uses: actions/upload-artifact@v4  # Updated to v4
         with:
           name: coverage-report
           path: ./coverage/lcov-report  # coverage report as artifact
