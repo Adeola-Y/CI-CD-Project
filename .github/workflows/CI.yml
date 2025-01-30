@@ -24,6 +24,7 @@ jobs:
       - name: Install dependencies
         run: npm install
         working-directory: ./project_template/project
+        
 
       - name: Run ESLint
         run: npx eslint . --config ./project_template/project/eslint.config.js
@@ -49,6 +50,11 @@ jobs:
       - name: Run Tests with Coverage
         run: npm run test:coverage  # run vitest with coverage
         working-directory: ./project_template/project
+
+        
+      - name: Show current working directory
+        run: pwd
+
 
       - name: Upload Coverage Report to GitHub Actions (Text)
         if: success()  # only upload if successfull
