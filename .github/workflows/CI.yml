@@ -1,4 +1,4 @@
-name: Basic CI Workflow
+name: CI Workflow with ESLint Config
 
 on:
   push:
@@ -28,8 +28,11 @@ jobs:
         run: npm install
         working-directory: ./project_template/project
 
-      # Step 4: Run ESLint
-      - name: Run ESLint
-        run: npx eslint .
-        working-directory: ./project_template/project
+      # Step 4: Check for ESLint config file existence (Debug)
+      - name: Check if ESLint config exists
+        run: ls -l ./project_template/project/eslint.config.js
 
+      # Step 5: Run ESLint with the config file
+      - name: Run ESLint with config file
+        run: npx eslint . --config ./project_template/project/eslint.config.js
+        working-directory: ./project_template/project
