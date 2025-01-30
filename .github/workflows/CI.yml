@@ -1,4 +1,4 @@
-name: CI 
+name: CI Workflow
 
 on:
   push:
@@ -24,15 +24,14 @@ jobs:
       - name: Install dependencies
         run: npm install
         working-directory: ./project_template/project
-        
 
       - name: Run ESLint
-        run: npx eslint . --config ./project_template/project/eslint.config.js
-        working-directory: ./project_template/project
+        run: npx eslint . --config $GITHUB_WORKSPACE/project_template/project/eslint.config.js
+        working-directory: $GITHUB_WORKSPACE/project_template/project
 
   test:
     runs-on: ubuntu-latest
-    needs: lint  # make linting works before running
+    needs: lint
 
     steps:
       - name: Checkout code
@@ -48,18 +47,18 @@ jobs:
         working-directory: ./project_template/project
 
       - name: Run Tests with Coverage
-        run: npm run test:coverage  # run vitest with coverage
+        run: npm run test:coverage
         working-directory: ./project_template/project
 
       - name: Upload Coverage Report to GitHub Actions (Text)
-        if: success()  # only upload if successfull
+        if: success()
         run: |
           echo "Code coverage report:"
-          cat ./coverage/coverage-summary.txt  # displaying coverage summary in log
+          cat ./coverage/coverage-summary.txt
 
       - name: Upload HTML Coverage Report as Artifact
         if: success()
         uses: actions/upload-artifact@v2
         with:
           name: coverage-report
-          path: ./coverage/lcov-report  # coverage report as artifact
+          path: ./coverage/lcov-report
