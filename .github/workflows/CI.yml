@@ -1,10 +1,17 @@
-name: Continuous Integration (CI)
+name: Continuous Integration 
 
-on: [push, pull_request]
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
 
 jobs:
   lint:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
@@ -12,12 +19,46 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: '16'  
+          node-version: '16'
 
       - name: Install dependencies
         run: npm install
-        working-directory: ./project_template/project  
+        working-directory: ./project_template/project
 
       - name: Run ESLint
-        run: npx eslint . --fix
-        working-directory: ./project_template/project  
+        run: npx eslint . --config project_template/project/eslint.config.js --max-warnings=0
+        working-directory: ./project_template/project
+
+  test:
+    runs-on: ubuntu-latest
+    needs: lint  # make linting works before running
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '16'
+
+      - name: Install dependencies
+        run: npm install
+        working-directory: ./project_template/project
+
+      - name: Run Tests with Coverage
+        run: npm run test:coverage  # run vitest with coverage
+        working-directory: ./project_template/project
+
+      - name: Upload Coverage Report to GitHub Actions (Text)
+        if: success()  # only upload if successfull
+        run: |
+          echo "Code coverage report:"
+          cat ./coverage/coverage-summary.txt  # displaying coverage summary in log
+
+      - name: Upload HTML Coverage Report as Artifact
+        if: success()
+        uses: actions/upload-artifact@v2
+        with:
+          name: coverage-report
+          path: ./coverage/lcov-report  # coverage report as artifact
