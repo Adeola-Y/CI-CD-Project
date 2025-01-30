@@ -17,18 +17,17 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      # Step 2: Set up Node.js
-      - name: Set up Node.js
-        uses: actions/setup-node@v2
-        with:
-          node-version: '16'
+      # Step 2: List top-level files in the repository (Debug)
+      - name: List top-level files
+        run: ls -l
+        working-directory: $GITHUB_WORKSPACE
 
       # Step 3: Install dependencies
       - name: Install dependencies
         run: npm install
         working-directory: ./project_template/project
 
-      # Step 4: List all files in the directory to verify path (Debug)
+      # Step 4: List all files in the project directory (Debug)
       - name: List files in project directory
         run: ls -R ./project_template
         working-directory: ./project_template
@@ -42,6 +41,7 @@ jobs:
       - name: Run ESLint with config file
         run: npx eslint . --config ./project_template/project/eslint.config.js
         working-directory: ./project_template/project
+
 
 
 
