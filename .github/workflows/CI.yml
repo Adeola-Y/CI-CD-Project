@@ -13,23 +13,65 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # Step 1: Checkout code
+      # Checkout code
       - name: Checkout code
         uses: actions/checkout@v2
 
-      # Step 2: List files in project_template directory to confirm structure
+      # list files in project_template directory to make surethey are there
       - name: List files in project_template directory
         run: ls -R ./project_template
 
-      # Step 3: List files in project_template/project directory
+      # list files in project_template/project directory
       - name: List files in project_template/project directory
         run: ls -l ./project_template/project
 
-      # Step 4: Install dependencies
+      # install dependencies
       - name: Install dependencies
         run: npm install
         working-directory: ./project_template/project
 
-      # Step 5: Run ESLint with config file using absolute path (without working-directory)
-      - name: Run ESLint with config file
-        run: npx eslint . --config $GITHUB_WORKSPACE/project_template/project/eslint.config.js
+      #  run eslint with config file and auto-fix
+      - name: Run ESLint with auto-fix
+        run: npx eslint . --config $GITHUB_WORKSPACE/project_template/project/eslint.config.js --fix
+        working-directory: ./project_template/project
+
+  test:
+    runs-on: ubuntu-latest
+    needs: lint  # linting finishes before tests
+
+    steps:
+      # checkout code
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      # set up node.js
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '16'
+
+      # install dependencies in correct directory
+      - name: Install dependencies
+        run: npm install
+        working-directory: ./project_template/project
+
+      # Step 4: run Tests with coverage with vitest
+      - name: Run Tests with Coverage
+        run: npm run test:coverage
+        working-directory: ./project_template/project
+
+      # upload coverage to git actiona
+      - name: Upload Coverage Report to GitHub Actions (Text)
+        if: success()  # only upload if success
+        run: |
+          echo "Code coverage report:"
+          cat ./coverage/coverage-summary.txt  # Show coverage summary in log
+
+      # upload coverage artifact
+      - name: Upload HTML Coverage Report as Artifact
+        if: success()
+        uses: actions/upload-artifact@v2
+        with:
+          name: coverage-report
+          path: ./coverage/lcov-report  # coverage report as artifact
+
