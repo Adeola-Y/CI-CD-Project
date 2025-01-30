@@ -1,1 +1,1 @@
-const validVariable = "Pass"; 
+		const 123 = "Fail" 
