@@ -17,30 +17,19 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      # Step 2: List top-level files in the repository (Debug)
-      - name: List top-level files
-        run: ls -l
-
-      # Step 3: List files in project_template to confirm directory structure
+      # Step 2: List files in project_template directory to confirm structure
       - name: List files in project_template directory
         run: ls -R ./project_template
 
-      # Step 4: List contents of project_template/project to see if eslint.config.js is there
+      # Step 3: List files in project_template/project directory
       - name: List files in project_template/project directory
         run: ls -l ./project_template/project
 
-      # Step 5: Install dependencies
+      # Step 4: Install dependencies
       - name: Install dependencies
         run: npm install
         working-directory: ./project_template/project
 
-      # Step 6: Run ESLint with config file
+      # Step 5: Run ESLint with config file using absolute path (without working-directory)
       - name: Run ESLint with config file
-        run: npx eslint . --config ./project_template/project/eslint.config.js
-        working-directory: ./project_template/project
-
-
-
-
-
-
+        run: npx eslint . --config $GITHUB_WORKSPACE/project_template/project/eslint.config.js
