@@ -1,1 +1,1 @@
-const variable = "Linting will fail";
+const 123 = "Linting will fail";
