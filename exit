@@ -1,0 +1,272 @@
+[33mcommit 44ea9cd43d923c071846466f4af471b3036a9996[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmaster[m[33m)[m
+Author: Adeola <sururatadeolayusuf@gmail.com>
+Date:   Thu Jan 30 13:01:28 2025 -0600
+
+    dowload eslint
+
+[33mcommit c54a88ab02c7675bd4d093cb7fa0aa3f27060512[m[33m ([m[1;31morigin/master[m[33m)[m
+Author: Adeola-Y <113193008+Adeola-Y@users.noreply.github.com>
+Date:   Thu Jan 30 12:46:19 2025 -0600
+
+    Update CI.yml
+
+[33mcommit 29edbd76df1485720d3e82c3d0dd81b9682eb377[m
+Author: Adeola-Y <113193008+Adeola-Y@users.noreply.github.com>
+Date:   Thu Jan 30 12:16:30 2025 -0600
+
+    Update CI.yml
+
+[33mcommit 3da79895601dad49235ab8baee91d3295e84a7f8[m
+Merge: 5ca8924 10c3df5
+Author: bukunmilekeatere <113192947+bukunmilekeatere@users.noreply.github.com>
+Date:   Thu Jan 30 11:13:22 2025 -0600
+
+    Merge pull request #2 from Adeola-Y/ci-cd-testing
+    
+    Demonstrating CI/CD
+
+[33mcommit 10c3df5348b784b0ff4496cb794589aafa5d86fc[m
+Author: Oluwabukunmi <bukunmi.lekeatere28@gmail.com>
+Date:   Thu Jan 30 11:05:53 2025 -0600
+
+    Fixed error to allow for CI/CD passing
+
+[33mcommit 1c10e777c5a9008c1e07533130d3ba944a0d88db[m
+Author: Oluwabukunmi <bukunmi.lekeatere28@gmail.com>
+Date:   Thu Jan 30 10:48:25 2025 -0600
+
+    Added error to js file to set off CI/CD fail
+
+[33mcommit 5ca8924522395c5a41cb977f80a1dd232236e90d[m
+Author: Ella Charles-Ugbechie <ellacharlesu@gmail.com>
+Date:   Wed Jan 29 10:50:20 2025 -0600
+
+    Update deploy.yml
+
+[33mcommit ecd6501094b36bcf2efdce5a8b559c4319d5f3e8[m
+Author: Ella Charles-Ugbechie <ellacharlesu@gmail.com>
+Date:   Wed Jan 29 10:28:33 2025 -0600
+
+    Rename rollup.config.mjs to rollup.config.js
+
+[33mcommit 168b491f8ceaf6bf2d9aeec10466076a0c61580c[m
+Author: Ella Charles-Ugbechie <ellacharlesu@gmail.com>
+Date:   Wed Jan 29 10:23:21 2025 -0600
+
+    Update CI.yml
+
+[33mcommit 9e7f0e403fb99f9c95aa8d186b1acdcc053b57a3[m
+Author: Ella Charles-Ugbechie <ellacharlesu@gmail.com>
+Date:   Wed Jan 29 10:22:48 2025 -0600
+
+    Update deploy.yml
+
+[33mcommit 5b822ac1d8991fa7ee4347e2eeb090e0f15d660f[m
+Author: Ella Charles-Ugbechie <ellacharlesu@gmail.com>
+Date:   Wed Jan 29 10:21:56 2025 -0600
+
+    Update CI.yml
+
+[33mcommit 7eb0964bf370b610c320bc311d80649e9c56f3e4[m
+Author: Ella Charles-Ugbechie <ellacharlesu@gmail.com>
+Date:   Wed Jan 29 10:20:07 2025 -0600
+
+    Update README.md
+
+[33mcommit d33902f802d9f1280bc2cbf43a7d170b6989c6fe[m
+Author: Ella Charles-Ugbechie <ellacharlesu@gmail.com>
+Date:   Wed Jan 29 10:18:25 2025 -0600
+
+    Update deploy.yml
+
+[33mcommit 2e52d8faeae5617947e9479b2e879ec91393242a[m
+Author: Ella Charles-Ugbechie <ellacharlesu@gmail.com>
+Date:   Tue Jan 28 19:02:02 2025 -0600
+
+    Update deploy.yml
+
+[33mcommit b44175452e2c97af1e6ba377eb1ccccdeeaa46c5[m
+Author: Ella Charles-Ugbechie <ellacharlesu@gmail.com>
+Date:   Tue Jan 28 18:57:48 2025 -0600
+
+    Update deploy.yml
+
+[33mcommit bb741f057ca14d6aea98e25ac4e9ccab79b778e7[m
+Author: Ella Charles-Ugbechie <ellacharlesu@gmail.com>
+Date:   Tue Jan 28 18:55:40 2025 -0600
+
+    Update deploy.yml
+
+[33mcommit fbf660a43b96cfd010e918aaad51aa8ef8c665e9[m
+Author: Ella Charles-Ugbechie <ellacharlesu@gmail.com>
+Date:   Tue Jan 28 18:55:16 2025 -0600
+
+    Update deploy.yml
+
+[33mcommit 9b7b613aefc5a5b71d27cfd1e58ecfcc4813a5b5[m
+Author: Ella Charles-Ugbechie <ellacharlesu@gmail.com>
+Date:   Tue Jan 28 18:53:09 2025 -0600
+
+    Update deploy.yml
+
+[33mcommit a671d62b54556fac3145dfe11eec2cac8a2641c6[m
+Author: Ella Charles-Ugbechie <ellacharlesu@gmail.com>
+Date:   Tue Jan 28 18:51:29 2025 -0600
+
+    Update deploy.yml
+
+[33mcommit 3b35da6cc9d17f4609120e71d15ea69c35bac671[m
+Author: Ella Charles-Ugbechie <ellacharlesu@gmail.com>
+Date:   Tue Jan 28 18:47:40 2025 -0600
+
+    Update deploy.yml
+
+[33mcommit 4907ca9cf1463748d6e5241419f81f8f0e03476b[m
+Author: Ella Charles-Ugbechie <ellacharlesu@gmail.com>
+Date:   Tue Jan 28 13:55:53 2025 -0600
+
+    Update README.md
+
+[33mcommit f274cc32c507145b43fbc63c7054328175f5155a[m
+Author: Ella Charles-Ugbechie <ellacharlesu@gmail.com>
+Date:   Tue Jan 28 13:55:31 2025 -0600
+
+    Create README.md
+
+[33mcommit 13580e61c188b93f799ac56905619ef062da7fac[m
+Author: Ella Charles-Ugbechie <ellacharlesu@gmail.com>
+Date:   Tue Jan 28 13:54:12 2025 -0600
+
+    Update deploy.yml
+
+[33mcommit 30d22958548cdf15f1bc8dd449cb86acac50f765[m
+Author: Ella Charles-Ugbechie <ellacharlesu@gmail.com>
+Date:   Tue Jan 28 13:48:44 2025 -0600
+
+    update deploy.yml
+
+[33mcommit 8c4584471e61173f9654c2a8b43d26334863bf59[m
+Author: Adeola-Y <113193008+Adeola-Y@users.noreply.github.com>
+Date:   Tue Jan 28 10:52:13 2025 -0600
+
+    Update CI.yml
+
+[33mcommit 3cf36daaa2a275709d800c853a2f3208c495de1b[m
+Author: Adeola-Y <113193008+Adeola-Y@users.noreply.github.com>
+Date:   Sun Jan 26 20:39:28 2025 -0600
+
+    Update CI.yml
+
+[33mcommit be6a559b700b5df4eb96202b53ae34efd032f7e4[m
+Author: Adeola-Y <113193008+Adeola-Y@users.noreply.github.com>
+Date:   Sun Jan 26 20:38:20 2025 -0600
+
+    Update package.json
+
+[33mcommit c15068baa510edba45d55ee11a2f2ff9096fbf6e[m
+Author: Adeola-Y <113193008+Adeola-Y@users.noreply.github.com>
+Date:   Sun Jan 26 20:37:45 2025 -0600
+
+    Update package.json wrong folder
+
+[33mcommit 18a86e1114fd41827a204b344c2d6a752061c49a[m
+Author: Adeola-Y <113193008+Adeola-Y@users.noreply.github.com>
+Date:   Sun Jan 26 20:34:46 2025 -0600
+
+    Update package.json changed directory of folder
+
+[33mcommit 854a4357ecb7a4386f4fb6e939c4e49480fd6bbc[m
+Author: Adeola-Y <113193008+Adeola-Y@users.noreply.github.com>
+Date:   Sun Jan 26 20:30:08 2025 -0600
+
+    Update CI.yml fixed problem with node.js
+
+[33mcommit 7d5c8a38198edcb1826d0bad6f91ae71a0d93f57[m
+Author: Adeola-Y <113193008+Adeola-Y@users.noreply.github.com>
+Date:   Sun Jan 26 20:24:59 2025 -0600
+
+    Update CI.yml added eslint --fix to fix linting issues
+
+[33mcommit 6405e550f51c5b5b09561ef97ae69dedfd764414[m
+Author: Adeola-Y <113193008+Adeola-Y@users.noreply.github.com>
+Date:   Sun Jan 26 20:18:40 2025 -0600
+
+    Update CI.yml changed deprecated artifiact to one that works
+
+[33mcommit 52c7c1c7cb5aea14b9c9fa071a986c1fe1bef7eb[m
+Author: Adeola-Y <113193008+Adeola-Y@users.noreply.github.com>
+Date:   Sun Jan 26 20:14:51 2025 -0600
+
+    Update CI.yml uses test coverage from json
+
+[33mcommit 0ccd6b26708c4cf365ed08f2a865b5e65ce52dfb[m
+Author: Adeola-Y <113193008+Adeola-Y@users.noreply.github.com>
+Date:   Sun Jan 26 20:13:49 2025 -0600
+
+    Update package.json removed comments
+
+[33mcommit 180aa5f8a0ed22c50f2531d7182d65dfda5196c6[m
+Author: Adeola-Y <113193008+Adeola-Y@users.noreply.github.com>
+Date:   Sun Jan 26 20:13:13 2025 -0600
+
+    Update package.json added c8, code coverage etc
+
+[33mcommit 907f7b1ca6e2fdddab8dd9ba037bf2d23d523430[m
+Author: Adeola-Y <113193008+Adeola-Y@users.noreply.github.com>
+Date:   Sun Jan 26 20:09:06 2025 -0600
+
+    Update CI.yml added steps to run code coverage
+
+[33mcommit 02c6da43086b46a840d54adce7404ec1cedec591[m
+Author: Adeola-Y <113193008+Adeola-Y@users.noreply.github.com>
+Date:   Sun Jan 26 20:05:39 2025 -0600
+
+    Update vitest.config.js configured for C8
+
+[33mcommit 0d7a6030d85ae74c20430cbb58f027ef1ed5959f[m
+Author: Adeola-Y <113193008+Adeola-Y@users.noreply.github.com>
+Date:   Sun Jan 26 09:49:02 2025 -0600
+
+    Update CI.yml
+
+[33mcommit 983ae01a02f68efdb825833cf9402ab114db78e6[m
+Author: Adeola-Y <113193008+Adeola-Y@users.noreply.github.com>
+Date:   Sun Jan 26 09:43:42 2025 -0600
+
+    Update package.json reverted back to original
+
+[33mcommit 98619067dbecea75c910d9bd34c346d70a7326f1[m
+Author: Adeola-Y <113193008+Adeola-Y@users.noreply.github.com>
+Date:   Sat Jan 25 21:36:45 2025 -0600
+
+    Update package.json added extra script towards end
+
+[33mcommit f1c37abcfe2c24afdc5dfb0340272e6f5f734608[m
+Author: Adeola-Y <113193008+Adeola-Y@users.noreply.github.com>
+Date:   Sat Jan 25 17:29:41 2025 -0600
+
+    Update CI.yml to go to right path to find package.json
+
+[33mcommit debd4015bfa45eec41ee26caa69eb2e3cd3dedc4[m
+Author: Adeola-Y <113193008+Adeola-Y@users.noreply.github.com>
+Date:   Sat Jan 25 17:14:54 2025 -0600
+
+    Update CI.yml changed the branch name to be correct
+
+[33mcommit 2de5bdac74a97f508dae2dd4348ee36a58462a2f[m
+Author: Adeola-Y <113193008+Adeola-Y@users.noreply.github.com>
+Date:   Sat Jan 25 16:52:20 2025 -0600
+
+    update CI.yml with example workflow
+
+[33mcommit 59eecbafa10645e85f8e7a11e99561c322b4bd58[m
+Author: Adeola <sururatadeolayusuf@gmail.com>
+Date:   Sat Jan 25 13:21:45 2025 -0600
+
+    created the workflows for ci
+
+[33mcommit 616b76d5b72a03ae5d6e4e6bdcb0e2789d12490e[m
+Author: Adeola <sururatadeolayusuf@gmail.com>
+Date:   Sat Jan 25 12:57:13 2025 -0600
+
+    Added all files from template
