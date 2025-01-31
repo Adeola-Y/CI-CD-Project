@@ -71,7 +71,8 @@ jobs:
         if: success()  # only upload if success
         run: |
           echo "Code coverage report:"
-          cat ./project_template/project/coverage/coverage-summary.txt  # Show coverage summary in log
+          ls ./project_template/project/coverage  # List contents of coverage folder to check if file exists
+          cat ./project_template/project/coverage/coverage-summary.txt || echo "No coverage summary file found"
 
       # upload report as artifact
       - name: Upload HTML Coverage Report as Artifact
