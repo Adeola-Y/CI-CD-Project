@@ -60,10 +60,10 @@ jobs:
         working-directory: ./project_template/project
 
       # Ensure Git configuration is cleaned up
-      - name: Clean up Git configuration
+      - name: Clean up orphan Git processes
         run: |
-          git config --global --unset-all http.https://github.com/.extraheader || true
-          git config --global --unset-all core.sshCommand || true
+          git config --global --unset-all http.https://github.com/.extraheader
+          git config --global --unset-all core.sshCommand
           git config --global --remove-section safe.directory || true
 
       # upload coverage to github actions
@@ -71,8 +71,7 @@ jobs:
         if: success()  # only upload if success
         run: |
           echo "Code coverage report:"
-          ls ./project_template/project/coverage  # List contents of coverage folder to check if file exists
-          cat ./project_template/project/coverage/coverage-summary.txt || echo "No coverage summary file found"
+          cat ./project_template/project/coverage/coverage-summary.txt  # Show coverage summary in log
 
       # upload report as artifact
       - name: Upload HTML Coverage Report as Artifact
@@ -80,4 +79,4 @@ jobs:
         uses: actions/upload-artifact@v4  # Updated to v4
         with:
           name: coverage-report
-          path: ./coverage/lcov-report # coverage report as artifact
+          path: ./project_template/project/coverage/lcov-report  # coverage report as artifact
