@@ -3,12 +3,13 @@ import { defineConfig } from 'vitest/config';
 
 export default defineConfig({
   test: {
+    environment: 'jsdom', 
     coverage: {
-      provider: 'istanbul', 
-      reporter: ['text', 'json', 'html', 'lcov'], // generates text, json, html, and lcov reports
-      all: true, // coverage for all files 
+      provider: 'istanbul',
+      reporter: ['text', 'json', 'html', 'lcov'],
+      all: true,
     },
-    globals: true, // Use global variables (this will make `beforeAll` work)
-    setupFiles: ['./setupTests.js'], // Point to your setup file
+    globals: true, 
+    setupFiles: ['./setupTests.js'], 
   },
 });
