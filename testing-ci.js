@@ -1,2 +1,2 @@
-const 123 = "This should fail";
+const goodVariable = "This should pass";
 
