@@ -72,7 +72,7 @@ jobs:
         if: success()
         run: |
           echo "Code coverage report:"
-          cat ./project_template/project/coverage/coverage-summary.txt
+          cat ./project_template/project/coverage/index.html
 
       # Upload HTML Coverage Report as Artifact
       - name: Upload HTML Coverage Report as Artifact
@@ -80,4 +80,4 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: coverage-report
-          path: ./project_template/project/coverage/lcov-report
+          path: ./project_template/project/coverage/index.html
