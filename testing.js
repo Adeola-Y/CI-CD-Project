@@ -1,1 +1,5 @@
-	const 123 = "Fail"
+function greet() {
+  console.log("Hello, " + name);
+}
+
+greet();
