@@ -1,1 +1,2 @@
-const validVariable = "Pass"; 
+const goodVariable = "Pass";
+
