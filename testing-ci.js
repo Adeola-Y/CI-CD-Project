@@ -1,6 +1,2 @@
-function greet() {
-  console.log("Hello, " + name);
-}
-
-greet();
+const 123 = "This should fail";
 
