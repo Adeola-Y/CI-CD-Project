@@ -62,8 +62,8 @@ jobs:
       # Ensure Git configuration is cleaned up
       - name: Clean up Git configuration
         run: |
-          git config --global --unset-all http.https://github.com/.extraheader
-          git config --global --unset-all core.sshCommand
+          git config --global --unset-all http.https://github.com/.extraheader || true
+          git config --global --unset-all core.sshCommand || true
           git config --global --remove-section safe.directory || true
 
       # upload coverage to github actions
