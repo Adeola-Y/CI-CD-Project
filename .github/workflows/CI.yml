@@ -32,7 +32,7 @@ jobs:
 
       # Run ESLint with auto-fix
       - name: Run ESLint with auto-fix
-        run: npx eslint . --config $GITHUB_WORKSPACE/project_template/project/eslint.config.js --fix
+        run: npx eslint . --config $GITHUB_WORKSPACE/project_template/project/eslint.config.js
         working-directory: ./project_template/project
 
   test:
