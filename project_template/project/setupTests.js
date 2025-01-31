@@ -1,10 +1,9 @@
-
-
 beforeAll(() => {
-  // mocking the canvas context (getContext) function
-  global.HTMLCanvasElement.prototype.getContext = () => ({
-    fillRect: () => {},
-    clearRect: () => {},
-
-  });
+  if (global.HTMLCanvasElement) {
+    global.HTMLCanvasElement.prototype.getContext = () => ({
+      fillRect: () => {},
+      clearRect: () => {},
+   
+    });
+  }
 });
